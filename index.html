@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat UI</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="themeToggle" class="theme-toggle">
+        <span class="icon">🌙</span>
+    </button> 
+
+    <div class="container">
+        <h2>What can I help with?</h2>
+        <div class="chat-box" id="chatBox">
+            <div class="messages" id="messages"></div>
+        </div>
+
+        <!-- Input Box for AI Message -->
+        <div id="chat-container">
+            <div id="messages"></div>
+            <div id="suggestions"></div>
+            <div id="input-container">
+        <div class="input-box">
+            <input type="text" id="userInput" placeholder="Ketik pesan..." onkeypress="handleKeyPress(event)">
+            <button class="send-button" onclick="sendMessage()" id="sendButton"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+        </div>
+
+        <div class="icons">           
+            <span class="icon" id="voiceButton"><i class="fa-solid fa-microphone"></i></span>
+            <span class="icon" id="humor-icon" onclick="handleHumor()"><i class="fa-solid fa-smile"></i></span>
+            <span class="icon" id="reminder-icon" onclick="handleReminder()"><i class="fa-solid fa-bell"></i></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

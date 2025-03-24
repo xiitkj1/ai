@@ -1,0 +1,193 @@
+body {
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.chat-box {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 15px;
+    width: 600px;
+    height: 300px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.messages::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-bubble {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    word-wrap: break-word;
+    display: inline-block;
+}
+
+.user-message {
+    align-self: flex-end;
+    background: #0084ff;
+    color: white;
+    border-top-right-radius: 0;
+}
+
+.ai-message {
+    align-self: flex-start;
+    background: #333;
+    color: white;
+    border-top-left-radius: 0;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+.send-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+    .chat-box {
+        width: 90%;
+        height: auto;
+    }
+
+    .messages {
+        padding: 8px;
+    }
+
+    .chat-bubble {
+        font-size: 12px;
+    }
+
+    .input-box {
+        padding: 8px;
+    }
+
+    input {
+        padding: 8px;
+    }
+
+    .send-button {
+        font-size: 16px;
+    }
+
+    .icons {
+        gap: 10px;
+    }
+
+    .icon {
+        font-size: 18px;
+    }
+}
+
+/* Responsif untuk perangkat yang lebih kecil (mobile) */
+@media screen and (max-width: 480px) {
+    .chat-box {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .messages {
+        padding: 6px;
+    }
+
+    .chat-bubble {
+        font-size: 11px;
+    }
+
+    .input-box {
+        padding: 6px;
+    }
+
+    input {
+        padding: 6px;
+    }
+
+    .send-button {
+        font-size: 14px;
+    }
+
+    .icons {
+        gap: 8px;
+    }
+
+    .icon {
+        font-size: 16px;
+    }
+}
+
+/* Responsif untuk perangkat besar (laptop/desktop) */
+@media screen and (min-width: 1024px) {
+    .chat-box {
+        width: 700px;
+        height: 400px;
+    }
+
+    .chat-bubble {
+        font-size: 16px;
+    }
+
+    .send-button {
+        font-size: 20px;
+    }
+}
